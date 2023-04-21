@@ -1,0 +1,31 @@
+local camera = workspace.Camera
+
+local player = game.Players.LocalPlayer
+
+local UIS = game:GetService("UserInputService")
+
+UIS.InputBegan:Connect(function(input)
+
+	if input.KeyCode == Enum.KeyCode.Z then
+
+		player.CameraMode = Enum.CameraMode.Classic
+
+		camera.FieldOfView = 26 
+
+	end
+
+end)
+
+UIS.InputEnded:Connect(function(input)
+
+	if input.KeyCode == Enum.KeyCode.Z then
+
+		player.CameraMode = Enum.CameraMode.Classic
+
+		camera.FieldOfView = 46 
+
+		
+
+	end
+
+end)
